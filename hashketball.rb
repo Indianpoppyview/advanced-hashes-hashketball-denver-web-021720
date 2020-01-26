@@ -152,7 +152,44 @@ def player_numbers(team_name)
   
 end
 
+def player_stats(find_player_name)
+  new_hash = {}
+  game_hash.collect do |place, team|
+    team.each do |attribute, data|
+      next unless attribute == :players
+      game_hash[place][attribute].each do |player|
+        next unless player[:player_name] == find_player_name
+        new hash = player.delete_if do |k, v|
+          k == :player_name
+        end
+      end
+    end
+  end
+  
+end
 
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
